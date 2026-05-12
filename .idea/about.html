@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Svitobudova</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Brand SVG logo display */
+    .brand-svg-wrap {
+      background: var(--color-void);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      padding: 28px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
+    }
+    .brand-type-label {
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      margin-bottom: 8px;
+    }
+    .wordmark-text {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.3rem;
+      color: var(--color-gold-light);
+      letter-spacing: 0.1em;
+    }
+    .figurative-mark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .fig-symbol {
+      font-size: 3.2rem;
+      color: var(--color-gold);
+      line-height: 1;
+    }
+    .fig-subtitle {
+      font-family: var(--font-heading);
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+    }
+    .shape-mark svg {
+      width: 80px;
+      height: 80px;
+    }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .value-item {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .value-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--color-gold);
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .value-item h3 { font-size: 1rem; margin-bottom: 8px; }
+    .value-item p { color: var(--color-text-muted); font-size: 0.9rem; margin: 0; }
+    @media (max-width: 700px) {
+      .value-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Svitobudova Home">
+      <span class="logo-mark" aria-hidden="true">✦</span>
+      <span class="logo-text">Svitobudova</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Pricing</a></li>
+      <li><a href="about.html" class="nav-link active">About Us</a></li>
+      <li><a href="license.html" class="nav-link">License</a></li>
+      <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="shop.html" class="nav-cta">Begin Your Journey</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="section-tag">About Us</span>
+      <h1>We Build the Tools<br/>That Build Worlds</h1>
+      <p>Svitobudova Digital Solutions GmbH - a boutique software studio merging traditional storytelling logic with modern database technology.</p>
+    </div>
+  </header>
+
+  <!-- Mission -->
+  <section class="about-section" aria-labelledby="mission-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag">Our Mission</span>
+          <h2 id="mission-heading">The Architecture of Imagination</h2>
+          <div class="divider" aria-hidden="true"></div>
+          <p>Founded in Vienna in 2021, Svitobudova was born from a frustration shared by every epic fantasy author, TTRPG game master, and narrative game designer: <em>the tools for writing didn't scale with the complexity of the worlds being written.</em></p>
+          <p>We set out to build a professional-grade suite that treats a fictional universe with the same rigor that a software architect treats a system - with dependency graphs, rule validators, and relational data structures.</p>
+          <p>Today, our 12-person team of developers, UX designers, narrative consultants, and legal professionals operates from our headquarters in Vienna's 7th district, serving thousands of creators across Europe and beyond.</p>
+        </div>
+        <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 16px;">
+          <!-- Decorative stat blocks -->
+          <div class="value-item" style="text-align: center;">
+            <div class="value-num">12</div>
+            <h3>Team Members</h3>
+            <p>Developers, designers, narrative consultants & legal experts</p>
+          </div>
+          <div class="value-item" style="text-align: center;">
+            <div class="value-num">2021</div>
+            <h3>Founded</h3>
+            <p>Vienna, Austria - in the heart of Europe's creative tech scene</p>
+          </div>
+          <div class="value-item" style="text-align: center;">
+            <div class="value-num">3</div>
+            <h3>Tiers</h3>
+            <p>Freemium · Architect · Pantheon - for every scale of creation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Section -->
+  <section class="brand-section" aria-labelledby="brands-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Trademark · Marke</span>
+        <h2 id="brands-heading">Our Brand Identities</h2>
+        <p>Three distinct brand forms protecting the Svitobudova identity. All marks are pending registration with the EUIPO under the relevant Nice Classification classes.</p>
+      </div>
+
+      <div class="brands-grid">
+
+        <!-- Brand 1: Figurative Mark (Bildmarke) -->
+        <article class="brand-card" aria-labelledby="brand1-heading">
+          <p class="brand-type-label">Brand Form 1 - Figurative Mark (Bildmarke)</p>
+          <div class="brand-svg-wrap" aria-label="Figurative mark: an eight-pointed star formed from intersecting hexagons in gold">
+            <div class="figurative-mark">
+              <span class="fig-symbol" aria-hidden="true">✦</span>
+              <span class="fig-subtitle" aria-hidden="true">The Architect's Star</span>
+            </div>
+          </div>
+          <h3 id="brand1-heading">The Architect's Star</h3>
+          <p>An eight-pointed stellar form, representing the intersection of infinite narrative branches — each ray a story path converging at the world's core. The form is derived from the geometric hexagonal cell (⬡) common in worldbuilding map conventions.</p>
+          <p><strong>Colors:</strong> Gold (#C9A84C) on void black (#09090F). No similar marks found in EUIPO eSearch for Class 42 software services.</p>
+          <span class="nizza">Nice Class 42 - Software as a Service</span>
+        </article>
+
+        <!-- Brand 2: Combined Word + Figurative (Wortbildmarke is one form) - Shape Mark (Formmarke) -->
+        <article class="brand-card" aria-labelledby="brand2-heading">
+          <p class="brand-type-label">Brand Form 2 - Shape Mark (Formmarke)</p>
+          <div class="brand-svg-wrap" aria-label="Shape mark: three concentric hexagons in progressively thinner strokes, representing nested narrative worlds">
+            <div class="shape-mark">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                <title>Nested Worlds shape mark</title>
+                <polygon points="40,4 72,22 72,58 40,76 8,58 8,22" stroke="#C9A84C" stroke-width="3" fill="none"/>
+                <polygon points="40,14 62,27 62,53 40,66 18,53 18,27" stroke="#C9A84C" stroke-width="2" opacity="0.65" fill="none"/>
+                <polygon points="40,24 52,32 52,48 40,56 28,48 28,32" stroke="#C9A84C" stroke-width="1.5" opacity="0.35" fill="none"/>
+                <circle cx="40" cy="40" r="4" fill="#C9A84C" opacity="0.9"/>
+              </svg>
+            </div>
+          </div>
+          <h3 id="brand2-heading">The Nested Worlds</h3>
+          <p>Three concentric hexagons, each representing a layer of narrative depth: the world's physical laws, its history, and its living characters. The central point is the author - the architect at the center of all creation. This three-dimensional shape is unique and non-descriptive for software services.</p>
+          <p><strong>Colors:</strong> Gold on black only. No decorative variation to maintain distinctiveness.</p>
+          <span class="nizza">Nice Class 42 · Class 9 - Software</span>
+        </article>
+
+        <!-- Brand 3: Motion / Position Mark (Positionsmarke / abstract) -->
+        <article class="brand-card" aria-labelledby="brand3-heading">
+          <p class="brand-type-label">Brand Form 3 - Abstract Pattern Mark (Abstraktes Markenzeichen)</p>
+          <div class="brand-svg-wrap" aria-label="Pattern mark: a grid of small dots arranged in a radial gradient, denser at center, sparser at edges">
+            <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+              <title>Constellation Dot pattern mark</title>
+              <!-- Procedural dot grid pattern -->
+              <g fill="#C9A84C">
+                <!-- Row pattern, density decreasing from center -->
+                <circle cx="60" cy="40" r="3.5" opacity="1"/>
+                <circle cx="72" cy="40" r="2.8" opacity="0.85"/>
+                <circle cx="48" cy="40" r="2.8" opacity="0.85"/>
+                <circle cx="84" cy="40" r="2" opacity="0.6"/>
+                <circle cx="36" cy="40" r="2" opacity="0.6"/>
+                <circle cx="96" cy="40" r="1.2" opacity="0.35"/>
+                <circle cx="24" cy="40" r="1.2" opacity="0.35"/>
+                <circle cx="60" cy="28" r="2.5" opacity="0.8"/>
+                <circle cx="60" cy="52" r="2.5" opacity="0.8"/>
+                <circle cx="72" cy="28" r="2" opacity="0.65"/>
+                <circle cx="48" cy="28" r="2" opacity="0.65"/>
+                <circle cx="72" cy="52" r="2" opacity="0.65"/>
+                <circle cx="48" cy="52" r="2" opacity="0.65"/>
+                <circle cx="60" cy="16" r="1.5" opacity="0.4"/>
+                <circle cx="60" cy="64" r="1.5" opacity="0.4"/>
+                <circle cx="84" cy="28" r="1.4" opacity="0.4"/>
+                <circle cx="36" cy="28" r="1.4" opacity="0.4"/>
+                <circle cx="84" cy="52" r="1.4" opacity="0.4"/>
+                <circle cx="36" cy="52" r="1.4" opacity="0.4"/>
+              </g>
+            </svg>
+          </div>
+          <h3 id="brand3-heading">The Constellation Grid</h3>
+          <p>An abstract radial dot pattern inspired by star charts and narrative node graphs. Denser at the centre and diffusing outward, it symbolises a world of detail radiating from a single authorial origin point. When used, it appears as a background texture or watermark - never as a standalone decorative element.</p>
+          <p><strong>Colors:</strong> Gold only. The arrangement and radial fade pattern are the registrable element, not the color alone.</p>
+          <span class="nizza">Nice Class 42 · Class 41 - Education & Training</span>
+        </article>
+
+      </div>
+
+      <!-- Trademark Notice & Verification -->
+      <div style="margin-top: 48px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 36px;">
+        <h3 style="margin-bottom: 16px;">Trademark Compliance Statement</h3>
+        <p class="text-muted">All three brand forms have been searched against the EUIPO eSearch Plus database, TMview, and the Madrid Monitor prior to adoption. The name <strong>"Svitobudova"</strong> is a Ukrainian-derived neologism with no prior registration in the software, creative tools, or publishing sectors within the European Union.</p>
+        <ul style="color: var(--color-text-muted); font-size: 0.95rem; margin: 16px 0 16px 24px;">
+          <li>The gold color (#C9A84C) is not claimed as a standalone trademark - it is only protected in combination with the shapes above.</li>
+          <li>The hexagonal shape is used in a highly specific, multi-layered arrangement not found in existing marks for Class 42.</li>
+          <li>The name deliberately avoids similarity with existing marks such as "Scrivener," "World Anvil," or "Notion."</li>
+          <li>Registrations pending: EUIPO Application Reference <strong>[PLACEHOLDER - file before submission]</strong>.</li>
+        </ul>
+        <p class="text-muted" style="font-size:0.85rem;"><em>Note: This is an academic exercise. The trademark statement is for demonstrative purposes only.</em></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Architects</span>
+        <h2 id="team-heading">Meet the Team</h2>
+      </div>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">🧑‍💻</div>
+          <h4>Olena Marchuk</h4>
+          <p>CEO & Co-Founder</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">👩‍🎨</div>
+          <h4>Vera Hoffmann</h4>
+          <p>Head of UX Design</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">👨‍💻</div>
+          <h4>Dmytro Koval</h4>
+          <p>Lead Engineer</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">📖</div>
+          <h4>Sabine Gruber</h4>
+          <p>Narrative Consultant</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">⚖</div>
+          <h4>Jan Berger</h4>
+          <p>Legal & Compliance</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">🗺</div>
+          <h4>Iryna Petrenko</h4>
+          <p>Cartography & Mapping</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">☁</div>
+          <h4>Markus Weiß</h4>
+          <p>Cloud Infrastructure</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">🎮</div>
+          <h4>Anastasiia Bondar</h4>
+          <p>Game Industry Liaison</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><span class="logo-mark" aria-hidden="true">✦</span><span class="logo-text">Svitobudova</span></a>
+        <p>Professional worldbuilding software for authors, screenwriters, and game developers.</p>
+        <p class="footer-legal-name">Svitobudova Digital Solutions GmbH<br/>Vienna, Austria</p>
+      </div>
+      <nav class="footer-nav" aria-label="Product navigation"><h3>Product</h3><ul role="list"><li><a href="shop.html">Pricing</a></li><li><a href="index.html#features">Features</a></li><li><a href="license.html">License</a></li></ul></nav>
+      <nav class="footer-nav" aria-label="Company navigation"><h3>Company</h3><ul role="list"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#imprint">Imprint</a></li></ul></nav>
+      <nav class="footer-nav" aria-label="Legal navigation"><h3>Legal</h3><ul role="list"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="license.html">Terms of Use</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Svitobudova Digital Solutions GmbH. All rights reserved.</p>
+      <p class="footer-media-credits">Brand SVG marks created in-house. Fonts: Cinzel Decorative &amp; EB Garamond via Google Fonts (OFL). All Unicode glyphs from the Unicode Standard (no license required).</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p class="cookie-text">We use cookies to improve your experience. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button id="declineCookies" class="btn btn-ghost" style="padding:8px 18px;font-size:0.75rem;">Decline</button>
+    <button id="acceptCookies" class="btn btn-primary" style="padding:8px 18px;font-size:0.75rem;">Accept All</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
