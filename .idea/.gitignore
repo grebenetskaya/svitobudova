@@ -8,3 +8,23 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Build directories
+dist/
+build/
+
+# Local env files
+.env
+.env.local
