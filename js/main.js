@@ -17,39 +17,61 @@ if (navToggle && navMenu) {
 }
 
 // Cookie banner
-const cookieBanner = document.getElementById("cookieBanner");
-const acceptCookies = document.getElementById("acceptCookies");
-const declineCookies = document.getElementById("declineCookies");
+function initCookieBanner() {
+  const cookieBanner = document.getElementById("cookieBanner");
+  const acceptCookies = document.getElementById("acceptCookies");
+  const declineCookies = document.getElementById("declineCookies");
 
-if (cookieBanner) {
+  if (!cookieBanner || !acceptCookies || !declineCookies) {
+    return;
+  }
+
   const cookieChoice = localStorage.getItem("svitobudovaCookieChoice");
 
   if (!cookieChoice) {
-    cookieBanner.classList.add("is-visible");
+    cookieBanner.classList.add("is-shown");
+
+    setTimeout(function () {
+      acceptCookies.focus();
+    }, 100);
   }
 
-  if (acceptCookies) {
-    acceptCookies.addEventListener("click", function () {
-      localStorage.setItem("svitobudovaCookieChoice", "accepted");
-      cookieBanner.classList.remove("is-visible");
-    });
+  function closeCookieBanner(choice) {
+    localStorage.setItem("svitobudovaCookieChoice", choice);
+    cookieBanner.classList.remove("is-shown");
   }
 
-  if (declineCookies) {
-    declineCookies.addEventListener("click", function () {
-      localStorage.setItem("svitobudovaCookieChoice", "declined");
-      cookieBanner.classList.remove("is-visible");
-    });
-  }
+  acceptCookies.addEventListener("click", function () {
+    closeCookieBanner("accepted");
+  });
+
+  declineCookies.addEventListener("click", function () {
+    closeCookieBanner("declined");
+  });
 }
 
-// Contact form demo
-const contactForm = document.getElementById("contactForm");
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initCookieBanner);
+} else {
+  initCookieBanner();
+}
 
-if (contactForm) {
+// Contact form demo with aria-live status message
+const contactForm = document.getElementById("contactForm");
+const contactSuccess = document.getElementById("contactSuccess");
+
+if (contactForm && contactSuccess) {
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    alert("Thank you. This is a demo form, so no message was actually sent.");
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    contactForm.hidden = true;
+    contactSuccess.hidden = false;
+    contactSuccess.focus();
   });
 }
 
@@ -71,7 +93,14 @@ if (planSelect && paymentSection) {
 if (checkoutForm && checkoutSuccess) {
   checkoutForm.addEventListener("submit", function (event) {
     event.preventDefault();
+
+    if (!checkoutForm.checkValidity()) {
+      checkoutForm.reportValidity();
+      return;
+    }
+
     checkoutForm.style.display = "none";
     checkoutSuccess.classList.add("is-shown");
+    checkoutSuccess.focus();
   });
 }

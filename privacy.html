@@ -2,23 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Svitobudova</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar">
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><span class="logo-mark">✦</span><span class="logo-text">Svitobudova</span></a>
-    <ul class="nav-menu">
+    <a href="index.html" class="nav-logo" aria-label="Svitobudova Home">
+      <span class="logo-mark" aria-hidden="true">✮</span>
+      <span class="logo-text">Svitobudova</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu" role="list">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="shop.html" class="nav-link">Pricing</a></li>
-      <li><a href="privacy.html" class="nav-link active">Privacy</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="license.html" class="nav-link">License</a></li>
+      <li><a href="privacy.html" class="nav-link active" aria-current="page">Privacy</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li>
+        <a href="shop.html#checkout" class="nav-cta" aria-label="Start your free trial">
+          Begin Your Journey
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
 
-<main class="legal-page container">
+<main id="main-content" class="legal-page container">
   <article class="legal-content">
     <span class="section-tag">Data Protection</span>
     <h1>Privacy Policy</h1>
@@ -43,5 +64,7 @@
     </div>
   </article>
 </main>
+
+<script src="js/main.js"></script>
 </body>
 </html>

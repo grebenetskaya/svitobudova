@@ -237,7 +237,7 @@
             <p id="card-note" style="font-size:0.8rem; color: var(--color-text-faint); margin-top: 6px;">No real payment is processed. This is a demonstration.</p>
           </div>
           <label class="consent-check" for="consent-terms" style="margin-bottom: 20px;">
-            <input type="checkbox" required aria-required="true" />
+            <input type="checkbox" id="consent-terms" required aria-required="true" />
             <span>I have read and agree to the <a href="license.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a>.</span>
           </label>
           <button type="submit" class="btn btn-primary" style="width: 100%;" aria-label="Create account and begin worldbuilding">Begin Your Journey</button>
@@ -278,11 +278,30 @@
 </footer>
 
 <!-- Cookie Banner -->
-<div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-  <p class="cookie-text">We use cookies to improve your experience. See our <a href="privacy.html">Privacy Policy</a>.</p>
+<div
+  id="cookieBanner"
+  class="cookie-banner"
+  role="dialog"
+  aria-modal="false"
+  aria-labelledby="cookie-title"
+  aria-describedby="cookie-description"
+  tabindex="-1"
+>
+  <p id="cookie-title" class="sr-only">Cookie consent</p>
+
+  <p id="cookie-description" class="cookie-text">
+    We use cookies to improve your experience and analyze site traffic.
+    See our <a href="privacy.html">Privacy Policy</a> for details.
+    This banner is for demonstration purposes; no actual tracking is implemented.
+  </p>
+
   <div class="cookie-actions">
-    <button id="declineCookies" class="btn btn-ghost" style="padding:8px 18px;font-size:0.75rem;">Decline</button>
-    <button id="acceptCookies" class="btn btn-primary" style="padding:8px 18px;font-size:0.75rem;">Accept All</button>
+    <button id="declineCookies" class="btn btn-ghost" style="padding:8px 18px;font-size:0.75rem;">
+      Decline
+    </button>
+    <button id="acceptCookies" class="btn btn-primary" style="padding:8px 18px;font-size:0.75rem;">
+      Accept All
+    </button>
   </div>
 </div>
 

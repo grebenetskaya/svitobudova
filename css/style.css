@@ -878,21 +878,26 @@ a:hover {
 
 /* Cookie banner */
 
+/* Cookie banner */
+
 .cookie-banner {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
   background: #ffffff;
-  border-top: 3px solid var(--primary);
+  border: 3px solid var(--primary);
+  border-radius: var(--radius);
   padding: 16px 20px;
   display: none;
   gap: 16px;
   align-items: center;
-  z-index: 2000;
+  z-index: 9999;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  pointer-events: auto;
 }
 
-.cookie-banner.is-visible {
+.cookie-banner.is-shown {
   display: flex;
 }
 
@@ -904,12 +909,17 @@ a:hover {
 .cookie-actions {
   display: flex;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 700px) {
   .cookie-banner {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .cookie-actions {
+    justify-content: flex-end;
   }
 }
 

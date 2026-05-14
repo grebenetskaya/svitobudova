@@ -123,7 +123,7 @@
         <div class="about-text">
           <span class="section-tag">Our Mission</span>
           <h2 id="mission-heading">The Architecture of Imagination</h2>
-          <div class="divider" aria-hidden="true"></div>
+          <div class="divider"></div>
           <p>Founded in Vienna in 2021, Svitobudova was born from a frustration shared by every epic fantasy author, TTRPG game master, and narrative game designer: <em>the tools for writing didn't scale with the complexity of the worlds being written.</em></p>
           <p>We set out to build a professional-grade suite that treats a fictional universe with the same rigor that a software architect treats a system - with dependency graphs, rule validators, and relational data structures.</p>
           <p>Today, our 12-person team of developers, UX designers, narrative consultants, and legal professionals operates from our headquarters in Vienna's 7th district, serving thousands of creators across Europe and beyond.</p>
@@ -325,11 +325,30 @@
   </div>
 </footer>
 
-<div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-  <p class="cookie-text">We use cookies to improve your experience. See our <a href="privacy.html">Privacy Policy</a>.</p>
+<div
+  id="cookieBanner"
+  class="cookie-banner"
+  role="dialog"
+  aria-modal="false"
+  aria-labelledby="cookie-title"
+  aria-describedby="cookie-description"
+  tabindex="-1"
+>
+  <p id="cookie-title" class="sr-only">Cookie consent</p>
+
+  <p id="cookie-description" class="cookie-text">
+    We use cookies to improve your experience and analyze site traffic.
+    See our <a href="privacy.html">Privacy Policy</a> for details.
+    This banner is for demonstration purposes; no actual tracking is implemented.
+  </p>
+
   <div class="cookie-actions">
-    <button id="declineCookies" class="btn btn-ghost" style="padding:8px 18px;font-size:0.75rem;">Decline</button>
-    <button id="acceptCookies" class="btn btn-primary" style="padding:8px 18px;font-size:0.75rem;">Accept All</button>
+    <button id="declineCookies" class="btn btn-ghost" style="padding:8px 18px;font-size:0.75rem;">
+      Decline
+    </button>
+    <button id="acceptCookies" class="btn btn-primary" style="padding:8px 18px;font-size:0.75rem;">
+      Accept All
+    </button>
   </div>
 </div>
 
